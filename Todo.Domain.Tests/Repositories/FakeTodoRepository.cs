@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Todo.Domain.Entities;
 using Todo.Domain.Repositories;
 
@@ -13,6 +14,26 @@ namespace Todo.Domain.Tests.Repositories
         public TodoItem GetById(Guid id, string user)
         {
             return new TodoItem("nova tarefa", "douglas", DateTime.Now);
-        }        
+        }
+
+        public IEnumerable<TodoItem> GetAll(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<TodoItem> GetAllDone(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<TodoItem> GetAllUnDone(string user)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<TodoItem> GetByPeriod(string user, DateTime date, bool done)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
